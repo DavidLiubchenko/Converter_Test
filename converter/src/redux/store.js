@@ -4,7 +4,7 @@ import reduxLogger from 'redux-logger';
 
 import rootReducers from './modules'
 
-const configureStore = (reducers = {}, preloadedState = {}, middlewares = []) => createStore(
+const configureStore = (reducers = {}, preloadedState = {}, middleware = []) => createStore(
     combineReducers({
         ...rootReducers,
         ...reducers,
@@ -12,7 +12,7 @@ const configureStore = (reducers = {}, preloadedState = {}, middlewares = []) =>
     preloadedState,
     compose(
         applyMiddleware(
-            ...middlewares,
+            ...middleware,
             thunk,
             reduxLogger
         ),
