@@ -16,7 +16,8 @@ export const Modal = () => {
             <div className={S.content}>
                 <div>Select your main currency</div>
                 <select defaultValue=''
-                        onChange={(event) => {}}>
+                        onChange={(event) => {
+                        }}>
                     <option value=''>Select</option>
                     <option>USD</option>
                     <option>UAH</option>

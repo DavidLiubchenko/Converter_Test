@@ -1,15 +1,18 @@
-import './App.css';
-import {connect} from "react-redux";
-import React from 'react';
-import {Navbar} from "./components/Navbar";
-import {Modal} from "./components/modal";
+import {connect, useDispatch} from "react-redux";
+import React, {useEffect} from 'react';
+import {Navbar} from "./components/topNavigation/Navbar";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Page1 from "./pages/page1";
 import Page2 from "./pages/page2";
 
 import {getPairs as getPairsActions} from "./redux/modules/pairs";
+import {getMainPairs as getMainPairsActions} from "./redux/modules/pairs";
 
-function App({pairs}) {
+function App({pairs, getPairs, getMainPairs}) {
+    useEffect(()=>{
+        getMainPairs()
+    },[])
+
     return (
         <BrowserRouter>
             {/*<Modal/>*/}
@@ -23,8 +26,9 @@ function App({pairs}) {
 }
 
 export default connect(
-    ({posts})=>({posts}),
+    ({pairs}) => ({pairs}),
     {
-        getPosts: getPairsActions
+        getPairs: getPairsActions,
+        getMainPairs: getMainPairsActions
     }
 )(App);

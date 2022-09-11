@@ -4,18 +4,6 @@ const Page2 = () => {
     const [formattingName, setFormattingName] = useState(['']);
     const [formattingValues, setFormattingValues] = useState([0]);
 
-    // useEffect(() => {
-    //     let arrN = [];
-    //     let arrV = [];
-    //     for (let key in fetchData) {
-    //         arrN.push(key)
-    //         arrV.push(fetchData[key])
-    //     }
-    //     setFormattingName(arrN)
-    //     setFormattingValues(arrV)
-    //
-    // }, [fetchData]);
-
     return (
         <div>
             {formattingName.map((el, idx) => <div style={{display: "flex"}}>
