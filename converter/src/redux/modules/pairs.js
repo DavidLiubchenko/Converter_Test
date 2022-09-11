@@ -4,6 +4,7 @@ const GET_PAIRS = `${moduleName}/GET_PAIRS`
 const GET_MAIN_PAIRS = `${moduleName}/GET_MAIN_PAIRS`
 
 const defaultState = {
+    currentRate: 2,
     pairs: [],
     mainPairs: []
 }
