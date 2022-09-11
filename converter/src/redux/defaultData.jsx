@@ -1,4 +1,4 @@
-export const data = ["AED",
+export const defaultData = ["AED",
     "AFN",
     "ALL",
     "AMD",
