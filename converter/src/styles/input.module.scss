@@ -33,29 +33,6 @@
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-
-  button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 2px #d7d6d6;
-  }
-
-  button:hover {background-color: #3e8e41}
-
-  button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 2px #666;
-    transform: translateY(4px);
-  }
 }
 
 
